@@ -1,6 +1,6 @@
 from django.contrib.gis import admin
 
-from models import Place
+from geo_data.models import Place
 
 
 admin.site.register(Place)
