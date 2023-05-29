@@ -65,7 +65,7 @@ class PlaceViewSet(viewsets.ModelViewSet):
 
         serializer = self.get_serializer(nearest_place)
 
-        return Response(serializer.data)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def list(self, request, *args, **kwargs):
         """Get all places in the database """
