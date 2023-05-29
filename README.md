@@ -14,6 +14,9 @@ Copy .env.sample -> .env and populate with all required data
 docker-compose up --build
 ```
 
+## Documentation
+
+The documentation is located in /api/swagger/ endpoint
 
 ## Technologies
 

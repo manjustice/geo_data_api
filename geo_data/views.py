@@ -69,7 +69,7 @@ class PlaceViewSet(viewsets.ModelViewSet):
 
     def list(self, request, *args, **kwargs):
         """Get all places in the database """
-        return super().list(self, request, *args, **kwargs)
+        return super().list(request, *args, **kwargs)
 
     def create(self, request, *args, **kwargs):
         """
@@ -79,13 +79,13 @@ class PlaceViewSet(viewsets.ModelViewSet):
 
         Description: string
 
-        Geom: string, format: Point('longitude', 'latitude') - longitude and latitude must be float type
+        Geom: string, format: POINT('longitude' 'latitude') - longitude and latitude must be float type
         """
-        return super().create(self, request, *args, **kwargs)
+        return super().create(request, *args, **kwargs)
 
     def retrieve(self, request, *args, **kwargs):
         """Get place information by its id"""
-        return super().retrieve(self, request, *args, **kwargs)
+        return super().retrieve(request, *args, **kwargs)
 
     def update(self, request, *args, **kwargs):
         """
@@ -95,7 +95,7 @@ class PlaceViewSet(viewsets.ModelViewSet):
 
         Description: string
 
-        Geom: string, format: Point('longitude', 'latitude') - longitude and latitude must be float type
+        Geom: string, format: POINT('longitude' 'latitude') - longitude and latitude must be float type
         """
         return super().update(request, *args, **kwargs)
 
@@ -107,6 +107,6 @@ class PlaceViewSet(viewsets.ModelViewSet):
 
         Description: string
 
-        Geom: string, format: Point('longitude', 'latitude') - longitude and latitude must be float type
+        Geom: string, format: POINT('longitude' 'latitude') - longitude and latitude must be float type
         """
-        return super().partial_update(self, request, *args, **kwargs)
+        return super().partial_update(request, *args, **kwargs)
