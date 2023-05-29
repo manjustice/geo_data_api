@@ -3,6 +3,8 @@ services:
     image: postgis/postgis:15-3.3
     ports:
       - "5432:5432"
+    volumes:
+      - /private/var/lib/postgresql:/var/lib/postgresql
     env_file:
       - .env
 
