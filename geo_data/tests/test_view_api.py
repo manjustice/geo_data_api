@@ -102,7 +102,7 @@ class PlaceViewTests(TestCase):
             {"error": "Missing required parameters: longitude, latitude"}
         )
 
-    def test_nearest_place_if_not_one_parameter(self):
+    def test_nearest_place_if_one_parameter_is_missing(self):
         params = {"longitude": 9.00}
         res = self.client.get(reverse("geo:place-nearest-place"), params)
 
