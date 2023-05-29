@@ -40,6 +40,14 @@ class PlaceViewTests(TestCase):
         self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(res.data, serializer.data)
 
+    def test_get_detail_of_place(self):
+        res = self.client.get(place_detail_url(self.first_place.id))
+
+        serializer = PlaceSerializer(self.first_place)
+
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
+        self.assertEqual(res.data, serializer.data)
+
     def test_detail_place(self):
         res = self.client.get(place_detail_url(self.first_place.id))
 
